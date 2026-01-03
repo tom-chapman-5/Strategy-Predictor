@@ -1,0 +1,1 @@
+The functionallity only works when accessing the python file, app.py, which I run in a virtual environment. This repository is mainly used as an archive as the site cannot function while being hosted on here.
