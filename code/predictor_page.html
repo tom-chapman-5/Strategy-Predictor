@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Strategy Predictor</title>
+        <link id="mode" href="styles_light.css" rel="stylesheet" type="text/css">
+        <link href="icon.png" rel="icon">
+    </head>
+
+    <body>
+        <ul class="nav_bar">
+            <li><button class="nav_button" onclick="document.location='home_page.html'">Home</button></li>
+            <li><button class="nav_button active">Predictor</button></li>
+            <li><button class="nav_button" onclick="document.location='data_page.html'">Data Trends</button></li>
+            <button class="change_mode" onclick="change_theme()"><img src="bulb.png" width="30%"></button>
+        </ul>
+
+        <div style="margin-left:150px;">
+            <div id="page_title">
+                <h1>F1 Strategy Predictor</h1>
+            </div>
+            <div class="box">
+                <div id="side_box_predictor">
+                    <div class="side_dropdown">
+                        <button class="dropdown_button">Track</button>
+                        <div class="dropdown_content">
+                            <div class="column">
+                                <button onclick="set_track(10)">Australia</button>
+                                <button onclick="set_track(49)">China</button>
+                                <button onclick="set_track(46)">Japan</button>
+                                <button onclick="set_track(63)">Bahrain</button>
+                                <button onclick="set_track(149)">Saudi Arabia</button>
+                                <button onclick="set_track(151)">Miami</button>
+                                <button onclick="set_track(6)">Emilia-Romagna</button>
+                                <button onclick="set_track(22)">Monaco</button>
+                            </div>
+                            <div class="column">
+                                <button onclick="set_track(15)">Spain</button>
+                                <button onclick="set_track(23)">Canada</button>
+                                <button onclick="set_track(19)">Austria</button>
+                                <button onclick="set_track(2)">Great Britain</button>
+                                <button onclick="set_track(7)">Belgium</button>
+                                <button onclick="set_track(4)">Hungary</button>
+                                <button onclick="set_track(55)">Netherlands</button>
+                                <button onclick="set_track(39)">Italy</button>
+                            </div>
+                            <div class="column">
+                                <button onclick="set_track(144)">Azerbaijan</button>
+                                <button onclick="set_track(61)">Singapore</button>
+                                <button onclick="set_track(9)">United States</button>
+                                <button onclick="set_track(65)">Mexico</button>
+                                <button onclick="set_track(14)">Brazil</button>
+                                <button onclick="set_track(152)">Las Vegas</button>
+                                <button onclick="set_track(150)">Qatar</button>
+                                <button onclick="set_track(70)">Abu Dhabi</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side_dropdown">
+                        <button class="dropdown_button">Weather</button>
+                        <div class="dropdown_content" style="width: 90%;">
+                            <button onclick="set_weather('clear')">Clear</button>
+                            <button onclick="set_weather('rain')">Rain</button>
+                        </div>
+                    </div>
+                    <button class="run_button" onclick="run_predictor()">Run</button>
+                </div>
+                <div class="main_box">
+                    <div id="info_output">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js_predictor.js" defer></script>
+    </body>
+</html>
