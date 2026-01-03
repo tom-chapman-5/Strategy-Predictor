@@ -1,0 +1,283 @@
+/* ------------------------------ main page layout ------------------------------ */
+
+/* lays out the page but not the side bar */
+body {
+	margin: 0px;
+	font-family: "F1-regular";
+	background: linear-gradient(rgba(38, 38, 38, 0.7), rgba(38, 38, 38, 0.7)), url("bg.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+    color: white;
+}
+
+/* designs the title text */
+h1 {
+	font-family: "F1-wide";
+	text-align: center;
+}
+
+h2 {
+	font-family: "F1-bold";
+}
+
+/* styles the title to sit and look right */
+#page_title {
+	background-color: #262626;
+	width: 100%;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-bottom: solid 2px #FF1801;
+}
+
+.box {
+	border: solid 2px #FF1801;
+	margin: 5%;
+	height: 68%;
+	background-color: #262626E5;
+	border-radius: 6px;
+}
+
+
+/* ---------------------------- fonts and characters ---------------------------- */
+
+/* for the general font of text */
+@font-face {
+	font-family: "F1-regular";
+	src: url("Formula1-Regular_web_0.ttf");
+}
+
+/* for titles and headings in the pages */
+@font-face {
+	font-family: "F1-bold";
+	src: url("Formula1-Bold_web_0.ttf");
+}
+
+/* for the main title across all pages */
+@font-face {
+	font-family: "F1-wide";
+	src: url("Formula1-Wide_web_0.ttf");
+}
+
+@charset "utf-8";
+
+
+/* ---------------------------------- side bar ---------------------------------- */
+
+/* makes the list a solid box down the side */
+ul.nav_bar {
+	margin: 0px;
+  	padding: 0px;
+  	width: 150px;
+  	background-color: #FF1801;
+  	position: fixed;
+  	height: 100%;
+}
+
+/* makes the links blocks */
+li button.nav_button {
+  	display: block;
+  	color: rgb(255, 255, 255);
+  	padding: 14px 16px;
+  	text-decoration: none;
+	font-family: "F1-regular";
+	border: none;
+	width: 100%;
+	text-align: left;
+	padding: 15px;
+	font-size: 15px;
+	background-color: #FF1801;
+	cursor: pointer;
+}
+
+/* changes the colours when active and hovering */
+li button.nav_button.active {
+  	background-color: #BF1100;
+  	color: #FFFFFF;
+}
+
+li button.nav_button:hover:not(.active) {
+  	background-color: #BF1100;
+  	color: #470600;
+}
+
+.change_mode {
+	background-color: #FF1801;
+  	border: none;
+  	color: white;
+	position: absolute;
+	bottom: 1%;
+	text-align: left;
+	cursor: pointer;
+}
+
+
+/* ---------------------------------- info box ---------------------------------- */
+
+.side_box {
+	margin: 0px;
+  	padding: 0px;
+	height: 100%;
+	border-right: solid 2px #FF1801;
+	display: inline-block;
+	width: 20%;
+	vertical-align: top;
+}
+
+ul.options {
+	margin: 0%;
+	padding: 0%;
+	list-style-type: none;
+}
+
+li button.info_button {
+	display: block;
+  	color: rgb(255, 255, 255);
+	text-decoration: none;
+	font-family: "F1-regular";
+	border: solid 2px #3A3A3A;
+	width: 90%;
+	padding: 5%;
+	margin: 5%;
+	box-sizing: border-box;
+	background-color: #262626;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+li button.info_button:hover {
+  	background-color: #3A3A3A;
+}
+
+.main_box {
+	height: 100%;
+	width: 79%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+p {
+	margin: 0%;
+	padding: 0%;
+}
+
+#info_output {
+	margin: 2%;
+	font-size: 90%;
+}
+
+.info_headings {
+	margin-left: 5%;
+}
+
+.tyre_img {
+	width: 5%;
+}
+
+
+/* ------------------------------- predictor box -------------------------------- */
+
+#side_box_predictor {
+	margin: 0px;
+  	padding: 0px;
+	height: 100%;
+	border-right: solid 2px #FF1801;
+	display: inline-block;
+	width: 20%;
+	vertical-align: top;
+}
+
+/* dropdowns */
+
+.dropdown_button {
+  	background-color: #262626;
+  	border: solid 2px #3A3A3A;
+  	border-radius: 3px;
+  	cursor: pointer;
+  	width: 90%;
+	padding: 5%;
+	margin: 5%;
+	margin-bottom: 0%;
+	box-sizing: border-box;
+	font-family: "F1-regular";
+	color: #FFFFFF;
+}
+
+.side_dropdown {
+  	position: relative;
+}
+
+.dropdown_content {
+  	display: none;
+  	position: absolute;
+  	background-color: #262626;
+	border: solid 2px #3A3A3A;
+  	border-radius: 3px;
+  	cursor: pointer;
+  	width: 200%;
+  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	left: 4%;
+}
+
+.dropdown_content button {
+  	font-family: "F1-regular";
+  	padding: 12px 16px;
+  	text-decoration: none;
+  	display: block;
+	width: 100%;
+	background-color: #262626;
+	border: none;
+	cursor: pointer;
+	color: #FFFFFF;
+}
+
+.dropdown_content button:hover {
+  	background-color: #3A3A3A;
+}
+
+.side_dropdown:hover .dropdown_content {
+  	display: block;
+}
+
+.side_dropdown:hover .dropdown_button {
+  	background-color: #3A3A3A;
+}
+
+.dropdown_content .column {
+    float: left;
+	width: 31%;
+    padding: 5px;
+}
+
+.run_button {
+	background-color: #FF1801;
+	border: solid 2px #BF1100;
+	border-radius: 3px;
+  	cursor: pointer;
+  	width: 90%;
+	padding: 5%;
+	margin: 5%;
+	margin-bottom: 0%;
+	box-sizing: border-box;
+	font-family: "F1-regular";
+	color: #FFFFFF;
+}
+
+.run_button:hover {
+	background-color: #BF1100;
+	color: #470600;
+}
+
+/* predictor output */
+
+
+#side_box_data {
+	margin: 0px;
+  	padding: 0px;
+	height: 100%;
+	border-right: solid 2px #FF1801;
+	display: inline-block;
+	width: 20%;
+	vertical-align: top;
+}

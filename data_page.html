@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Strategy Predictor</title>
+        <link id="mode" href="styles_light.css" rel="stylesheet" type="text/css">
+        <link href="icon.png" rel="icon">
+    </head>
+
+    <body>
+        <ul class="nav_bar">
+            <li><button class="nav_button" onclick="document.location='home_page.html'">Home</button></li>
+            <li><button class="nav_button" onclick="document.location='predictor_page.html'">Predictor</button></li>
+            <li><button class="nav_button active">Data Trends</button></li>
+            <button class="change_mode" onclick="change_theme()"><img src="bulb.png" width="30%"></button>
+        </ul>
+
+        <div style="margin-left:150px;">
+            <div id="page_title">
+                <h1>F1 Strategy Predictor</h1>
+            </div>
+            <div class="box">
+                <div id="side_box_data">
+                    <div class="side_dropdown">
+                        <button class="dropdown_button">Team/Driver</button>
+                        <div class="dropdown_content" style="width: 90%;">
+                            <button onclick="data_option('team')">Team</button>
+                            <button onclick="data_option('driver')">Driver</button>
+                        </div>
+                    </div>
+                    <button class="run_button" onclick="python_api()">Create Graph</button>
+                </div>
+                <div class="main_box">
+                    <div id="info_output">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js_predictor.js" defer></script>
+    </body>
+</html>
